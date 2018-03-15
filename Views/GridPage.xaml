@@ -40,7 +40,7 @@
             </GridView.ItemTemplate>
         </GridView>-->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition x:Name="Id" Width="500" />
+            <ColumnDefinition x:Name="Id" Width="Auto" />
             <ColumnDefinition x:Name="Name" Width="100" />
             <ColumnDefinition x:Name="Symbol" Width="100"/>
             <ColumnDefinition x:Name="Rank" Width="100"/>
