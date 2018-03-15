@@ -117,19 +117,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activation\ActivationHandler.cs" />
-    <Compile Include="Helpers\CoinMarketCapConverter.cs" />
+    <Compile Include="Helpers\BlockChainChartJsonConverter.cs" />
+    <Compile Include="Helpers\CoinMarketCapJsonConverter.cs" />
     <Compile Include="Helpers\EnumToBooleanConverter.cs" />
     <Compile Include="Helpers\Json.cs" />
     <Compile Include="Helpers\SettingsStorageExtensions.cs" />
+    <Compile Include="Models\BlockchainChart.cs" />
     <Compile Include="Models\CoinMarketCap.cs" />
     <Compile Include="Models\DataPoint.cs" />
     <Compile Include="Models\SampleOrder.cs" />
     <Compile Include="Services\ActivationService.cs" />
     <Compile Include="Activation\DefaultLaunchActivationHandler.cs" />
+    <Compile Include="Services\BlockchainService.cs" />
     <Compile Include="Services\CoinMarketCapService.cs" />
     <Compile Include="Services\NavigationServiceEx.cs" />
     <Compile Include="Services\SampleDataService.cs" />
     <Compile Include="Services\ThemeSelectorService.cs" />
+    <Compile Include="Strings\BlockchainChartKey.cs" />
     <Compile Include="Strings\CoinKey.cs" />
     <Compile Include="ViewModels\ChartViewModel.cs" />
     <Compile Include="ViewModels\GridViewModel.cs" />

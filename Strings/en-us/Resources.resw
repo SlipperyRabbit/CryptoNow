@@ -138,7 +138,7 @@
     <comment>Page title for Main</comment>
   </data>
   <data name="PivotItem_Main.Header" xml:space="preserve">
-    <value>Main</value>
+    <value>Coins</value>
     <comment>Pivot item header for Main</comment>
   </data>
   <data name="Blank_Title.Text" xml:space="preserve">
@@ -214,19 +214,19 @@
     <comment>Pivot item header for WebView</comment>
   </data>
   <data name="Grid_Title.Text" xml:space="preserve">
-    <value>Grid</value>
+    <value>Crypto Currencies</value>
     <comment>Page title for Grid</comment>
   </data>
   <data name="PivotItem_Grid.Header" xml:space="preserve">
-    <value>Grid</value>
+    <value>Currencies</value>
     <comment>Pivot item header for Grid</comment>
   </data>
   <data name="Chart_Title.Text" xml:space="preserve">
-    <value>Chart</value>
+    <value>BTC Price Chart</value>
     <comment>Page title for Chart</comment>
   </data>
   <data name="PivotItem_Chart.Header" xml:space="preserve">
-    <value>Chart</value>
+    <value>Charts</value>
     <comment>Pivot item header for Chart</comment>
   </data>
   <data name="MasterDetail_Title.Text" xml:space="preserve">
@@ -238,7 +238,7 @@
     <comment>No selection text for MasterDetail</comment>
   </data>
   <data name="PivotItem_MasterDetail.Header" xml:space="preserve">
-    <value>MasterDetail</value>
+    <value>Details</value>
     <comment>Pivot item header for MasterDetail</comment>
   </data>
   <data name="ExceptionSettingsStorageExtensionsFileNameIsNullOrEmpty" xml:space="preserve">
