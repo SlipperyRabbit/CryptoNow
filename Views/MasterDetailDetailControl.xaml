@@ -9,72 +9,83 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
     <ScrollViewer Name="ForegroundElement" VerticalScrollMode="Enabled" HorizontalAlignment="Stretch" Padding="12,0">
-        <StackPanel HorizontalAlignment="Left">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,3,0,0">
-                <!--<FontIcon
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="0,3,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <!--<FontIcon
                     FontSize="40"
                     Glyph="{x:Bind TickerItem.Symbol, Mode=OneWay}"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"/>-->
-                <TextBlock Margin="12,0,0,0"
-                           Text="{x:Bind TickerItem.Symbol, Mode=OneWay}"
-                           Style="{StaticResource SubheaderTextBlockStyle}" />
-                <TextBlock
-                    Margin="12,0,0,0"
-                    Text="{x:Bind TickerItem.Name, Mode=OneWay}"
-                    Style="{StaticResource SubheaderTextBlockStyle}" />
+                    <TextBlock Margin="12,0,0,0"
+                               Text="{x:Bind TickerItem.Symbol, Mode=OneWay}"
+                               Style="{StaticResource SubheaderTextBlockStyle}" />
+                    <TextBlock
+                        Margin="12,0,0,0"
+                        Text="{x:Bind TickerItem.Name, Mode=OneWay}"
+                        Style="{StaticResource SubheaderTextBlockStyle}" />
+                </StackPanel>
             </StackPanel>
-            <StackPanel Name="block" Orientation="Vertical" HorizontalAlignment="Left" Padding="0,10,0,0">
-                <TextBlock Text="Price USD" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Text="{x:Bind TickerItem.PriceUsd, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="Price BTC" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Text="{x:Bind TickerItem.PriceBtc, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="Rank" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Text="{x:Bind TickerItem.Rank, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="24 Hour Volume" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Text="{x:Bind TickerItem.HVolume24, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="Market Cap" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Text="{x:Bind TickerItem.MarketCapUsd, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="Available Supply" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Text="{x:Bind TickerItem.AvailableSupply, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-            </StackPanel>
-            <StackPanel Name="block2" HorizontalAlignment="Left"  Padding="0,10,0,0">
-                <TextBlock Text="Total Supply" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Text="{x:Bind TickerItem.TotalSupply, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="Max Supply" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Text="{x:Bind TickerItem.MaxSupply, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="1 Hour Percentage Change" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Text="{x:Bind TickerItem.PercentChange1H, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="24 Hour Percentage Change" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Text="{x:Bind TickerItem.PercentChange24H, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="7 Day Percentage Change" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Text="{x:Bind TickerItem.PercentChange7D, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="Last Update" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Text="{x:Bind TickerItem.LastUpdated, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <!--<TextBlock Text="{x:Bind TickerItem.Name, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="{x:Bind TickerItem.Rank, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />-->
-                <!--<TextBlock Text="Status" Style="{StaticResource SubtitleTextBlockStyle}"/>
-                <TextBlock Text="{x:Bind TickerItem.Status, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="Order date" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,8,0,0"/>
-                <TextBlock Text="{x:Bind TickerItem.OrderDate, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="Company" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,8,0,0"/>
-                <TextBlock Text="{x:Bind TickerItem.Company, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="Ship to" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,8,0,0"/>
-                <TextBlock Text="{x:Bind TickerItem.ShipTo, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
-                <TextBlock Text="Order total" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,8,0,0"/>
-                <TextBlock Text="{x:Bind TickerItem.OrderTotal, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+            <StackPanel Name="block" Orientation="Horizontal" Padding="0,10,0,0">
+                <StackPanel Name="Panel1" Orientation="Vertical">
+                    <TextBlock Text="Price USD" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" TextWrapping="Wrap"/>
+                    <TextBlock Text="{x:Bind TickerItem.PriceUsdFmt, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="Price BTC" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
+                    <TextBlock Text="{x:Bind TickerItem.PriceBtc, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="Rank" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
+                    <TextBlock Text="{x:Bind TickerItem.Rank, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="24 Hour Volume" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
+                    <TextBlock Text="{x:Bind TickerItem.HVolume24Fmt, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="Market Cap" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
+                    <TextBlock Text="{x:Bind TickerItem.MarketCapUsdFmt, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                </StackPanel>
+                <StackPanel Name="Panel2" Orientation="Vertical">
+                    <TextBlock Text="Available Supply" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
+                    <TextBlock Text="{x:Bind TickerItem.AvailableSupplyFmt, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="Total Supply" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
+                    <TextBlock Text="{x:Bind TickerItem.TotalSupplyFmt, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="Max Supply" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
+                    <TextBlock Text="{x:Bind TickerItem.MaxSupplyFmt, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="1 Hour Percentage Change" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
+                    <TextBlock Text="{x:Bind TickerItem.PercentChange1HFmt, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="24 Hour Percentage Change" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
+                    <TextBlock Text="{x:Bind TickerItem.PercentChange24HFmt, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="7 Day Percentage Change" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
+                    <TextBlock Text="{x:Bind TickerItem.PercentChange7DFmt, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="Last Update" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
+                    <TextBlock Text="{x:Bind TickerItem.LastUpdated, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
+                </StackPanel>
+                <!--<Grid x:Name="Grid" HorizontalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition x:Name="Column1" />
+                        <ColumnDefinition x:Name="Column2"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Price USD" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" Grid.Column="0" />
+                    <TextBlock Text="{x:Bind TickerItem.PriceUsd, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" />
+                    <TextBlock Text="Price BTC" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" Grid.Column="0" />
+                    <TextBlock Text="{x:Bind TickerItem.PriceBtc, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" />
+                    <TextBlock Text="Rank" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" Grid.Column="0" />
+                    <TextBlock Text="{x:Bind TickerItem.Rank, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" />
+                    <TextBlock Text="24 Hour Volume" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" Grid.Column="0" />
+                    <TextBlock Text="{x:Bind TickerItem.HVolume24, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" />
+                    <TextBlock Text="Market Cap" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" Grid.Column="0" />
+                    <TextBlock Text="{x:Bind TickerItem.MarketCapUsd, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" />
+                    <TextBlock Text="Available Supply" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" Grid.Column="0" />
+                    <TextBlock Text="{x:Bind TickerItem.AvailableSupply, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" />
 
-                <TextBlock Text="Note 1" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis hendrerit nulla, vel molestie libero. In nec ultricies magna, ultricies molestie ipsum. Mauris non dignissim velit. Etiam malesuada blandit mauris eu maximus. Quisque ornare, felis nec scelerisque mollis, risus dolor posuere magna, in gravida quam mi id nisi. Nullam mattis consequat ex. Cras nulla neque, dictum ac urna et, vestibulum feugiat ex. Pellentesque malesuada accumsan ligula, vel fringilla lacus facilisis sit amet. Proin convallis tempor arcu, ac placerat libero pretium ut. Praesent hendrerit nisl at lobortis viverra. Fusce vitae velit odio. Nam ut tortor sed purus finibus sollicitudin quis at ante. Ut sodales dolor vel eros mollis suscipit. Donec eu nulla id urna ultricies consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;" />
-
-                <TextBlock Text="Note 2" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis hendrerit nulla, vel molestie libero. In nec ultricies magna, ultricies molestie ipsum. Mauris non dignissim velit. Etiam malesuada blandit mauris eu maximus. Quisque ornare, felis nec scelerisque mollis, risus dolor posuere magna, in gravida quam mi id nisi. Nullam mattis consequat ex. Cras nulla neque, dictum ac urna et, vestibulum feugiat ex. Pellentesque malesuada accumsan ligula, vel fringilla lacus facilisis sit amet. Proin convallis tempor arcu, ac placerat libero pretium ut. Praesent hendrerit nisl at lobortis viverra. Fusce vitae velit odio. Nam ut tortor sed purus finibus sollicitudin quis at ante. Ut sodales dolor vel eros mollis suscipit. Donec eu nulla id urna ultricies consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;" />
-
-                <TextBlock Text="Note 3" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis hendrerit nulla, vel molestie libero. In nec ultricies magna, ultricies molestie ipsum. Mauris non dignissim velit. Etiam malesuada blandit mauris eu maximus. Quisque ornare, felis nec scelerisque mollis, risus dolor posuere magna, in gravida quam mi id nisi. Nullam mattis consequat ex. Cras nulla neque, dictum ac urna et, vestibulum feugiat ex. Pellentesque malesuada accumsan ligula, vel fringilla lacus facilisis sit amet. Proin convallis tempor arcu, ac placerat libero pretium ut. Praesent hendrerit nisl at lobortis viverra. Fusce vitae velit odio. Nam ut tortor sed purus finibus sollicitudin quis at ante. Ut sodales dolor vel eros mollis suscipit. Donec eu nulla id urna ultricies consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;" />
-
-                <TextBlock Text="Note 4" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />
-                <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,24" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis hendrerit nulla, vel molestie libero. In nec ultricies magna, ultricies molestie ipsum. Mauris non dignissim velit. Etiam malesuada blandit mauris eu maximus. Quisque ornare, felis nec scelerisque mollis, risus dolor posuere magna, in gravida quam mi id nisi. Nullam mattis consequat ex. Cras nulla neque, dictum ac urna et, vestibulum feugiat ex. Pellentesque malesuada accumsan ligula, vel fringilla lacus facilisis sit amet. Proin convallis tempor arcu, ac placerat libero pretium ut. Praesent hendrerit nisl at lobortis viverra. Fusce vitae velit odio. Nam ut tortor sed purus finibus sollicitudin quis at ante. Ut sodales dolor vel eros mollis suscipit. Donec eu nulla id urna ultricies consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;" />-->
+                    <TextBlock Text="Total Supply" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" Grid.Column="1" />
+                    <TextBlock Text="{x:Bind TickerItem.TotalSupply, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="1" />
+                    <TextBlock Text="Max Supply" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" Grid.Column="1" />
+                    <TextBlock Text="{x:Bind TickerItem.MaxSupply, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="1" />
+                    <TextBlock Text="1 Hour Percentage Change" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" Grid.Column="1" />
+                    <TextBlock Text="{x:Bind TickerItem.PercentChange1H, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="1" />
+                    <TextBlock Text="24 Hour Percentage Change" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" Grid.Column="1" />
+                    <TextBlock Text="{x:Bind TickerItem.PercentChange24H, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="1" />
+                    <TextBlock Text="7 Day Percentage Change" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" Grid.Column="1" />
+                    <TextBlock Text="{x:Bind TickerItem.PercentChange7D, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="1" />
+                    <TextBlock Text="Last Update" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" Grid.Column="1" />
+                    <TextBlock Text="{x:Bind TickerItem.LastUpdated, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="1" />
+                </Grid>-->
             </StackPanel>
         </StackPanel>
     </ScrollViewer>

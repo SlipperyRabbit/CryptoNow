@@ -88,16 +88,16 @@
                     <tg:DataGridNumericalColumn PropertyName="Rank"></tg:DataGridNumericalColumn>
                     <tg:DataGridTextColumn PropertyName="Name"></tg:DataGridTextColumn>
                     <tg:DataGridTextColumn PropertyName="Symbol"></tg:DataGridTextColumn>
-                    <tg:DataGridNumericalColumn PropertyName="PriceUsd" Header="US $"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="PriceUsdFmt" Header="US $"></tg:DataGridNumericalColumn>
                     <tg:DataGridNumericalColumn PropertyName="PriceBtc" Header="Btc"></tg:DataGridNumericalColumn>
-                    <tg:DataGridNumericalColumn PropertyName="HVolume24" Header="24H volume"></tg:DataGridNumericalColumn>
-                    <tg:DataGridNumericalColumn PropertyName="MarketCapUsd" Header="Market cap"></tg:DataGridNumericalColumn>
-                    <tg:DataGridNumericalColumn PropertyName="AvailableSupply" Header="Available Supply"></tg:DataGridNumericalColumn>
-                    <tg:DataGridNumericalColumn PropertyName="TotalSupply" Header="Total Supply"></tg:DataGridNumericalColumn>
-                    <tg:DataGridNumericalColumn PropertyName="MaxSupply" Header="Max Supply"></tg:DataGridNumericalColumn>
-                    <tg:DataGridNumericalColumn PropertyName="PercentChange1H" Header="1H % change"></tg:DataGridNumericalColumn>
-                    <tg:DataGridNumericalColumn PropertyName="PercentChange24H" Header="24H % change"></tg:DataGridNumericalColumn>
-                    <tg:DataGridNumericalColumn PropertyName="PercentChange7D" Header="7 days % change"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="HVolume24Fmt" Header="24H volume"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="MarketCapUsdFmt" Header="Market cap"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="AvailableSupplyFmt" Header="Available Supply"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="TotalSupplyFmt" Header="Total Supply"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="MaxSupplyFmt" Header="Max Supply"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="PercentChange1HFmt" Header="1H % change"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="PercentChange24HFmt" Header="24H % change"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="PercentChange7D Fmt" Header="7 days % change"></tg:DataGridNumericalColumn>
                     <tg:DataGridDateColumn PropertyName="LastUpdated" Header="Last updated"></tg:DataGridDateColumn>
                 </tg:RadDataGrid.Columns>
             </tg:RadDataGrid>
