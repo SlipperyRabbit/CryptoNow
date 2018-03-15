@@ -12,7 +12,7 @@
 
     <Grid>
         <Pivot x:Uid="PivotPage">
-            <PivotItem x:Uid="PivotItem_Main">
+            <!--<PivotItem x:Uid="PivotItem_Main">
                 <Frame>
                     <views:MainPage/>
                 </Frame>
@@ -26,7 +26,7 @@
                 <Frame>
                     <views:TabbedPage/>
                 </Frame>
-            </PivotItem>
+            </PivotItem>-->
             <PivotItem x:Uid="PivotItem_WebView">
                 <Frame>
                     <views:WebViewPage/>

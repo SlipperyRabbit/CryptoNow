@@ -17,9 +17,9 @@ namespace CryptoNow.ViewModels
 
             SimpleIoc.Default.Register(() => new NavigationServiceEx());
             Register<PivotViewModel, PivotPage>();
-            Register<MainViewModel, MainPage>();
-            Register<BlankViewModel, BlankPage>();
-            Register<TabbedViewModel, TabbedPage>();
+            //Register<MainViewModel, MainPage>();
+            //Register<BlankViewModel, BlankPage>();
+            //Register<TabbedViewModel, TabbedPage>();
             Register<WebViewViewModel, WebViewPage>();
             Register<GridViewModel, GridPage>();
             Register<ChartViewModel, ChartPage>();
@@ -37,11 +37,11 @@ namespace CryptoNow.ViewModels
 
         public WebViewViewModel WebViewViewModel => ServiceLocator.Current.GetInstance<WebViewViewModel>();
 
-        public TabbedViewModel TabbedViewModel => ServiceLocator.Current.GetInstance<TabbedViewModel>();
+        //public TabbedViewModel TabbedViewModel => ServiceLocator.Current.GetInstance<TabbedViewModel>();
 
-        public BlankViewModel BlankViewModel => ServiceLocator.Current.GetInstance<BlankViewModel>();
+        //public BlankViewModel BlankViewModel => ServiceLocator.Current.GetInstance<BlankViewModel>();
 
-        public MainViewModel MainViewModel => ServiceLocator.Current.GetInstance<MainViewModel>();
+        //public MainViewModel MainViewModel => ServiceLocator.Current.GetInstance<MainViewModel>();
 
         public PivotViewModel PivotViewModel => ServiceLocator.Current.GetInstance<PivotViewModel>();
 
