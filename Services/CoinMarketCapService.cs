@@ -31,8 +31,9 @@ namespace CryptoNow.Services
                 HttpClient client = new HttpClient();
                 HttpResponseMessage responseGet = await client.GetAsync(uri, HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(false);
                 var response = await responseGet.Content.ReadAsStringAsync();
-                var list = JsonConvert.DeserializeObject<ObservableCollection<CoinMarketCap>>(response, settings);
-                return list;
+                return JsonConvert.DeserializeObject<ObservableCollection<CoinMarketCap>>(response, settings);
+                //var list = JsonConvert.DeserializeObject<ObservableCollection<CoinMarketCap>>(response, settings).OrderBy(t => t.Rank);
+                //return new ObservableCollection<CoinMarketCap>(list);
             }
             catch (Exception e)
             {

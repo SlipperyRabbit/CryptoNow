@@ -1,9 +1,14 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+//using Telerik.Data.Core;
 
 namespace CryptoNow.Models
 {
     public class CoinMarketCap
     {
+        //[Display]
+        [Display(AutoGenerateField = false )]
         public string Id { get; set; }
         public string Name { get; set; }
         public string Symbol { get; set; }
@@ -15,9 +20,9 @@ namespace CryptoNow.Models
         public decimal AvailableSupply { get; set; }
         public decimal TotalSupply { get; set; }
         public decimal? MaxSupply { get; set; }
-        public decimal PercentageChange1H { get; set; }
-        public decimal PercentageChange24H { get; set; }
-        public decimal PercentageChange7D { get; set; }
+        public decimal PercentChange1H { get; set; }
+        public decimal PercentChange24H { get; set; }
+        public decimal PercentChange7D { get; set; }
         public DateTime LastUpdated { get; set; }
     }
 }

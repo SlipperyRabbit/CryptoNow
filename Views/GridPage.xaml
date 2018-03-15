@@ -11,7 +11,8 @@
     <Grid
         x:Name="ContentArea"
         Margin="12,0,12,0">
-        <!--<GridView IsItemClickEnabled="True"
+        <!--<GridView HorizontalAlignment="Left" Margin="96,92,0,-102" Grid.RowSpan="2" VerticalAlignment="Top" Width="100"
+                  IsItemClickEnabled="True"
                   IsSwipeEnabled="true"
                   SelectionMode="Single">
 
@@ -25,21 +26,25 @@
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition x:Name="Id" Width="Auto" />
+                            <ColumnDefinition x:Name="Name" Width="100" />
+                            <ColumnDefinition x:Name="Symbol" Width="100"/>
+                            <ColumnDefinition x:Name="Rank" Width="100"/>
                             <ColumnDefinition Width="200"/>
                             <ColumnDefinition Width="200"/>
                             <ColumnDefinition Width="200"/>
                             <ColumnDefinition Width="200"/>
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Grid.Column="0" Text="{Binding UserName}"/>
-                        <TextBlock Grid.Column="1" Text="{Binding FirstName}"/>
-                        <TextBlock Grid.Column="2" Text="{Binding LastName}"/>
-                        <TextBlock Grid.Column="3" Text="{Binding Email}"/>
+                        <TextBlock Grid.Column="0" Text="{Binding ElementName=Id }"/>
+                        <TextBlock Grid.Column="1" Text="{Binding ElementName=Name}"/>-=
+                        <TextBlock Grid.Column="2" Text="{Binding ElementName=Symbol}"/>
+                        <TextBlock Grid.Column="3" Text="{Binding ElementName=Rank}"/>
                     </Grid>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>-->
-        <Grid.ColumnDefinitions>
+        <!--<Grid.ColumnDefinitions>
             <ColumnDefinition x:Name="Id" Width="Auto" />
             <ColumnDefinition x:Name="Name" Width="100" />
             <ColumnDefinition x:Name="Symbol" Width="100"/>
@@ -55,7 +60,7 @@
             <ColumnDefinition x:Name="PercentageChange24H" Width="100"/>
             <ColumnDefinition x:Name="PercentChange7D" Width="100"></ColumnDefinition>
             <ColumnDefinition x:Name="LastUpdated" Width="100"/>
-        </Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>-->
         <Grid.RowDefinitions>
             <RowDefinition x:Name="TitleRow" Height="48"/>
             <RowDefinition Height="*"/>
@@ -69,7 +74,26 @@
         <Grid
             Grid.Row="1"
             Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-            <tg:RadDataGrid ColumnDataOperationsMode="Flyout" x:Name="grid" ItemsSource="{x:Bind ViewModel.Source}" HorizontalAlignment="Stretch" />
+            <tg:RadDataGrid ColumnDataOperationsMode="Flyout" x:Name="GridTracker" ItemsSource="{x:Bind ViewModel.Source}"
+                            HorizontalAlignment="Stretch" AutoGenerateColumns="False">
+                <tg:RadDataGrid.Columns>
+                    <tg:DataGridTextColumn PropertyName="Id" IsVisible="False"></tg:DataGridTextColumn>
+                    <tg:DataGridNumericalColumn PropertyName="Rank"></tg:DataGridNumericalColumn>
+                    <tg:DataGridTextColumn PropertyName="Name"></tg:DataGridTextColumn>
+                    <tg:DataGridTextColumn PropertyName="Symbol"></tg:DataGridTextColumn>
+                    <tg:DataGridNumericalColumn PropertyName="PriceUsd" Header="US $"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="PriceBtc" Header="Btc"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="HVolume24" Header="24H volume"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="MarketCapUsd" Header="Market cap"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="AvailableSupply" Header="Available Supply"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="TotalSupply" Header="Total Supply"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="MaxSupply" Header="Max Supply"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="PercentChange1H" Header="1H % change"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="PercentChange24H" Header="24H % change"></tg:DataGridNumericalColumn>
+                    <tg:DataGridNumericalColumn PropertyName="PercentChange7D" Header="7 days % change"></tg:DataGridNumericalColumn>
+                    <tg:DataGridDateColumn PropertyName="LastUpdated" Header="Last updated"></tg:DataGridDateColumn>
+                </tg:RadDataGrid.Columns>
+            </tg:RadDataGrid>
         </Grid>
     </Grid>
 </Page>

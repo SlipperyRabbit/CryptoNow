@@ -70,12 +70,19 @@ namespace CryptoNow.Helpers
                     MarketCapUsd = (decimal)jo[Keys.CoinKey.market_cap_usd],
                     AvailableSupply = (decimal)jo[Keys.CoinKey.available_supply],
                     TotalSupply = (decimal)jo[Keys.CoinKey.total_supply],
-                    MaxSupply = (decimal?)jo[Keys.CoinKey.max_supply],
-                    PercentageChange1H = (decimal)jo[Keys.CoinKey.percent_change_1h],
-                    PercentageChange24H = (decimal)jo[Keys.CoinKey.percent_change_24h],
-                    PercentageChange7D = (decimal)jo[Keys.CoinKey.percent_change_7d],
+                    //MarketCapUsd = Convert.ToInt64((decimal)jo[Keys.CoinKey.market_cap_usd]),
+                    //AvailableSupply = Convert.ToInt64((decimal)jo[Keys.CoinKey.available_supply]),
+                    //TotalSupply = Convert.ToInt64((decimal)jo[Keys.CoinKey.total_supply]),
+                    //MaxSupply = jo[Keys.CoinKey.max_supply] == null ? null : Convert.ToInt64((decimal?)jo[Keys.CoinKey.max_supply]),
+                    PercentChange1H = (decimal)jo[Keys.CoinKey.percent_change_1h],
+                    PercentChange24H = (decimal)jo[Keys.CoinKey.percent_change_24h],
+                    PercentChange7D = (decimal)jo[Keys.CoinKey.percent_change_7d],
                     LastUpdated = new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds((int)jo[Keys.CoinKey.last_updated])
                 };
+                //weird
+                //https://stackoverflow.com/questions/6137974/no-implicit-conversion-when-using-conditional-operator
+                if (jo[Keys.CoinKey.max_supply] != null)
+                    coin.MaxSupply = (decimal?)jo[Keys.CoinKey.max_supply];
                 coins.Add(coin);
             }
 
