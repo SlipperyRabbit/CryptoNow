@@ -1,11 +1,11 @@
 ﻿using System;
-
+using CommonServiceLocator;
 using CryptoNow.Services;
 using CryptoNow.Views;
 
 using GalaSoft.MvvmLight.Ioc;
 
-using Microsoft.Practices.ServiceLocation;
+//using Microsoft.Practices.ServiceLocation;
 
 namespace CryptoNow.ViewModels
 {

@@ -11,7 +11,51 @@
     <Grid
         x:Name="ContentArea"
         Margin="12,0,12,0">
+        <!--<GridView IsItemClickEnabled="True"
+                  IsSwipeEnabled="true"
+                  SelectionMode="Single">
 
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapGrid Orientation="Vertical"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="{Binding UserName}"/>
+                        <TextBlock Grid.Column="1" Text="{Binding FirstName}"/>
+                        <TextBlock Grid.Column="2" Text="{Binding LastName}"/>
+                        <TextBlock Grid.Column="3" Text="{Binding Email}"/>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="Id" Width="500" />
+            <ColumnDefinition x:Name="Name" Width="100" />
+            <ColumnDefinition x:Name="Symbol" Width="100"/>
+            <ColumnDefinition x:Name="Rank" Width="100"/>
+            <ColumnDefinition x:Name="PriceUsd" Width="100"/>
+            <ColumnDefinition x:Name="PriceBtc" Width="100"/>
+            <ColumnDefinition x:Name="HVolume24" Width="100"/>
+            <ColumnDefinition x:Name="MarketCapUsd" Width="100"/>
+            <ColumnDefinition x:Name="AvailableSupply" Width="100"/>
+            <ColumnDefinition x:Name="TotalSupply" Width="100"/>
+            <ColumnDefinition x:Name="MaxSupply" Width="100"/>
+            <ColumnDefinition x:Name="PercentageChange1H" Width="100"/>
+            <ColumnDefinition x:Name="PercentageChange24H" Width="100"/>
+            <ColumnDefinition x:Name="PercentChange7D" Width="100"></ColumnDefinition>
+            <ColumnDefinition x:Name="LastUpdated" Width="100"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition x:Name="TitleRow" Height="48"/>
             <RowDefinition Height="*"/>
@@ -25,7 +69,7 @@
         <Grid
             Grid.Row="1"
             Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
-            <tg:RadDataGrid ColumnDataOperationsMode="Flyout" x:Name="grid" ItemsSource="{x:Bind ViewModel.Source}" />
+            <tg:RadDataGrid ColumnDataOperationsMode="Flyout" x:Name="grid" ItemsSource="{x:Bind ViewModel.Source}" HorizontalAlignment="Stretch" />
         </Grid>
     </Grid>
 </Page>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 using CryptoNow.Models;
@@ -10,12 +11,14 @@ namespace CryptoNow.ViewModels
 {
     public class GridViewModel : ViewModelBase
     {
-        public ObservableCollection<SampleOrder> Source
+        public ObservableCollection<CoinMarketCap> Source
         {
             get
             {
                 // TODO WTS: Replace this with your actual data
-                return SampleDataService.GetGridSampleData();
+                //return SampleDataService.GetGridSampleData();
+                var ticker = CoinMarketCapService.GetTicker();
+                return ticker.Result;
             }
         }
     }
