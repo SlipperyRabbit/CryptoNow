@@ -9,13 +9,13 @@ namespace CryptoNow.Views
 {
     public sealed partial class MasterDetailDetailControl : UserControl
     {
-        public SampleOrder MasterMenuItem
+        public CoinMarketCap TickerItem
         {
-            get { return GetValue(MasterMenuItemProperty) as SampleOrder; }
-            set { SetValue(MasterMenuItemProperty, value); }
+            get { return GetValue(TickerItemProperty) as CoinMarketCap; }
+            set { SetValue(TickerItemProperty, value); }
         }
 
-        public static readonly DependencyProperty MasterMenuItemProperty = DependencyProperty.Register("MasterMenuItem", typeof(SampleOrder), typeof(MasterDetailDetailControl), new PropertyMetadata(null, OnMasterMenuItemPropertyChanged));
+        public static readonly DependencyProperty TickerItemProperty = DependencyProperty.Register("TickerItem", typeof(CoinMarketCap), typeof(MasterDetailDetailControl), new PropertyMetadata(null, OnMasterMenuItemPropertyChanged));
 
         public MasterDetailDetailControl()
         {

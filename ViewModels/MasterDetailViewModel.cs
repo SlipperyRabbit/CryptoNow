@@ -14,15 +14,23 @@ namespace CryptoNow.ViewModels
 {
     public class MasterDetailViewModel : ViewModelBase
     {
-        private SampleOrder _selected;
+        //private SampleOrder _selected;
 
-        public SampleOrder Selected
+        //public SampleOrder Selected
+        //{
+        //    get { return _selected; }
+        //    set { Set(ref _selected, value); }
+        //}
+
+        //public ObservableCollection<SampleOrder> SampleItems { get; private set; } = new ObservableCollection<SampleOrder>();
+        private CoinMarketCap _selected;
+
+        public CoinMarketCap Selected
         {
             get { return _selected; }
             set { Set(ref _selected, value); }
         }
-
-        public ObservableCollection<SampleOrder> SampleItems { get; private set; } = new ObservableCollection<SampleOrder>();
+        public ObservableCollection<CoinMarketCap> CoinItems { get; private set; } = new ObservableCollection<CoinMarketCap>();
 
         public MasterDetailViewModel()
         {
@@ -30,18 +38,22 @@ namespace CryptoNow.ViewModels
 
         public async Task LoadDataAsync(MasterDetailsViewState viewState)
         {
-            SampleItems.Clear();
+            //SampleItems.Clear();
+            CoinItems.Clear();
 
-            var data = await SampleDataService.GetSampleModelDataAsync();
+            //var data = await SampleDataService.GetSampleModelDataAsync();
+            var data = await CoinMarketCapService.GetTicker();
 
             foreach (var item in data)
             {
-                SampleItems.Add(item);
+                //SampleItems.Add(item);
+                CoinItems.Add(item);
             }
 
             if (viewState == MasterDetailsViewState.Both)
             {
-                Selected = SampleItems.First();
+                //Selected = SampleItems.First();
+                Selected = CoinItems.First();
             }
         }
     }

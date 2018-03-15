@@ -21,5 +21,16 @@ namespace CryptoNow.ViewModels
                 return ticker.Result;
             }
         }
+
+        public ObservableCollection<CoinMarketCap> DisconnectedSource
+        {
+            get
+            {
+                var coins = new ObservableCollection<CoinMarketCap>();
+                var coin = new CoinMarketCap();
+                coins.Add(coin);
+                return coins;
+            }
+        }
     }
 }

@@ -230,7 +230,7 @@
     <comment>Pivot item header for Chart</comment>
   </data>
   <data name="MasterDetail_Title.Text" xml:space="preserve">
-    <value>MasterDetail</value>
+    <value>Coin Details</value>
     <comment>Page title for MasterDetail</comment>
   </data>
   <data name="MasterDetail_NoSelection.Text" xml:space="preserve">
