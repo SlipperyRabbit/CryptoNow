@@ -1,1 +1,0 @@
-C:\code\CryptoNow\CryptoNow.Test\CryptoNow.Test.csproj;x86
