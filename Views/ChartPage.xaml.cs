@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Windows.UI.Xaml;
 using CryptoNow.ViewModels;
 
 using Windows.UI.Xaml.Controls;
@@ -10,7 +10,8 @@ namespace CryptoNow.Views
     {
         private ChartViewModel ViewModel
         {
-            get { return DataContext as ChartViewModel; }
+            get => DataContext as ChartViewModel;
+            //set => DataContext = value;
         }
 
         // TODO WTS: Change the chart as appropriate to your app.
@@ -18,6 +19,11 @@ namespace CryptoNow.Views
         public ChartPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_OnClick(object sender, RoutedEventArgs e)
+        {
+            Bindings.Update();
         }
     }
 }

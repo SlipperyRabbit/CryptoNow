@@ -19,6 +19,12 @@
                 Property="Foreground"
                 Value="Yellow"></Setter>
         </Style>
+        <Style x:Key="ButtonStyle"
+               TargetType="Button">
+            <Setter Property="Margin" Value="5,5,0,5"/>
+            <Setter Property="Padding" Value="5,5,5,5"></Setter>
+            <Setter Property="BorderBrush" Value="SlateGray"></Setter>
+        </Style>
     </Page.Resources>
     <Grid
         x:Name="ContentArea"
@@ -29,25 +35,43 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock
-            x:Name="TitlePage"
-            x:Uid="Chart_Title"
-            Style="{StaticResource PageTitleStyle}" />
+        <StackPanel Name="PanelTitle" Orientation="Horizontal">
+            <TextBlock
+                x:Name="TitlePage"
+                x:Uid="Chart_Title"
+                Style="{StaticResource PageTitleStyle}" />
 
+            <Button Name="Button" Style="{StaticResource ButtonStyle}" Click="Button_OnClick" Content="Refresh" />
+        </StackPanel>
         <Grid Grid.Row="1" Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
             <tc:RadCartesianChart>
                 <tc:RadCartesianChart.Grid>
                     <tc:CartesianChartGrid MajorLinesVisibility="Y"></tc:CartesianChartGrid>
                 </tc:RadCartesianChart.Grid>
                 <tc:RadCartesianChart.HorizontalAxis>
-                    <tc:DateTimeCategoricalAxis DateTimeComponent="Week"
-                                                LabelFormat="{}{0,0:MMM-dd}"
-                                                LabelStyle="{StaticResource LabelStyle}" />
+                    <tc:DateTimeContinuousAxis MajorStepUnit="Week" MajorStep="1"
+                                               LabelFormat="{}{0,0:MMM-dd}"
+                                               LabelStyle="{StaticResource LabelStyle}"/>
+                    <!--<tc:DateTimeCategoricalAxis DateTimeComponent="day"
+                                                LabelFormat="{}{0,45:MMM}"
+                                                LabelStyle="{StaticResource LabelStyle}" />-->
                 </tc:RadCartesianChart.HorizontalAxis>
                 <tc:RadCartesianChart.VerticalAxis>
                     <tc:LinearAxis LabelStyle="{StaticResource LabelStyle}" />
                 </tc:RadCartesianChart.VerticalAxis>
                 <tc:LineSeries ItemsSource="{x:Bind ViewModel.Source}">
+                    <tc:LineSeries.LabelDefinitions>
+                        <tc:ChartSeriesLabelDefinition HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <tc:ChartSeriesLabelDefinition.Template>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Y}"/>
+                                        <TextBlock Text="{Binding X}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </tc:ChartSeriesLabelDefinition.Template>
+                        </tc:ChartSeriesLabelDefinition>
+                    </tc:LineSeries.LabelDefinitions>
                     <tc:LineSeries.ValueBinding>
                         <tc:PropertyNameDataPointBinding PropertyName="Y"></tc:PropertyNameDataPointBinding>
                     </tc:LineSeries.ValueBinding>
