@@ -210,7 +210,7 @@
     <comment>Open in browser button automation tooltip property for WebView</comment>
   </data>
   <data name="PivotItem_WebView.Header" xml:space="preserve">
-    <value>WebView</value>
+    <value>Home</value>
     <comment>Pivot item header for WebView</comment>
   </data>
   <data name="Grid_Title.Text" xml:space="preserve">
@@ -226,7 +226,7 @@
     <comment>Page title for Chart</comment>
   </data>
   <data name="PivotItem_Chart.Header" xml:space="preserve">
-    <value>Charts</value>
+    <value>BTC Chart</value>
     <comment>Pivot item header for Chart</comment>
   </data>
   <data name="MasterDetail_Title.Text" xml:space="preserve">

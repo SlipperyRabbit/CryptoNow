@@ -27,7 +27,7 @@
                 </StackPanel>
             </StackPanel>
             <StackPanel Name="block" Orientation="Horizontal" Padding="0,10,0,0">
-                <StackPanel Name="Panel1" Orientation="Vertical">
+                <StackPanel Name="Panel1" Orientation="Vertical" Padding="0,0,15,0">
                     <TextBlock Text="Price USD" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" TextWrapping="Wrap"/>
                     <TextBlock Text="{x:Bind TickerItem.PriceUsdFmt, Mode=OneWay}" Style="{StaticResource BodyTextBlockStyle}" />
                     <TextBlock Text="Price BTC" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,12,0,0" />

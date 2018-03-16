@@ -15,14 +15,6 @@ namespace CryptoNow.ViewModels
         {
         }
 
-        public List<BlockchainChartValue> Source
-        {
-            get
-            {
-                // TODO WTS: Replace this with your actual data
-                //return SampleDataService.GetChartSampleData();
-                return BlockchainService.GetValues().Result;
-            }
-        }
+        public List<BlockchainChartValue> Source => BlockchainService.GetValues().Result;
     }
 }

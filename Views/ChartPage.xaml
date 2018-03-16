@@ -41,35 +41,11 @@
                 </tc:RadCartesianChart.Grid>
                 <tc:RadCartesianChart.HorizontalAxis>
                     <tc:DateTimeCategoricalAxis DateTimeComponent="Week"
-                                                LabelFormat="{}{0,0:MMM}"
+                                                LabelFormat="{}{0,0:MMM-dd}"
                                                 LabelStyle="{StaticResource LabelStyle}" />
-                    <!--<tc:CategoricalAxis Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}">
-                        <tc:CategoricalAxis.LineStyle>
-                            <Style TargetType="Line">
-                                <Setter Property="Stroke" Value="{ThemeResource SystemControlBackgroundBaseMediumBrush}"/>
-                            </Style>
-                        </tc:CategoricalAxis.LineStyle>
-                        --><!--<tc:CategoricalAxis.MajorTickStyle>
-                            <Style TargetType="Rectangle">
-                                <Setter Property="Fill" Value="{ThemeResource SystemControlBackgroundBaseMediumBrush}"/>
-                            </Style>
-                        </tc:CategoricalAxis.MajorTickStyle>--><!--
-                    </tc:CategoricalAxis>-->
                 </tc:RadCartesianChart.HorizontalAxis>
                 <tc:RadCartesianChart.VerticalAxis>
                     <tc:LinearAxis LabelStyle="{StaticResource LabelStyle}" />
-                    <!--<tc:LinearAxis Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}" >
-                        <tc:LinearAxis.LineStyle>
-                            <Style TargetType="Line">
-                                <Setter Property="Stroke" Value="{ThemeResource SystemControlBackgroundBaseMediumBrush}"/>
-                            </Style>
-                        </tc:LinearAxis.LineStyle>
-                        --><!--<tc:LinearAxis.MajorTickStyle>
-                            <Style TargetType="Rectangle">
-                                <Setter Property="Fill" Value="{ThemeResource SystemControlBackgroundBaseMediumBrush}"/>
-                            </Style>
-                        </tc:LinearAxis.MajorTickStyle>--><!--
-                    </tc:LinearAxis>-->
                 </tc:RadCartesianChart.VerticalAxis>
                 <tc:LineSeries ItemsSource="{x:Bind ViewModel.Source}">
                     <tc:LineSeries.ValueBinding>
@@ -79,14 +55,6 @@
                         <tc:PropertyNameDataPointBinding PropertyName="X"></tc:PropertyNameDataPointBinding>
                     </tc:LineSeries.CategoryBinding>
                 </tc:LineSeries>
-                <!--<tc:BarSeries ItemsSource="{x:Bind ViewModel.Source}" ShowLabels="True">
-                    <tc:BarSeries.CategoryBinding>
-                        <tc:PropertyNameDataPointBinding PropertyName="Values.X" />
-                    </tc:BarSeries.CategoryBinding>
-                    <tc:BarSeries.ValueBinding>
-                        <tc:PropertyNameDataPointBinding PropertyName="Values.Y" />
-                    </tc:BarSeries.ValueBinding>
-                </tc:BarSeries>-->
             </tc:RadCartesianChart>
         </Grid>
     </Grid>
