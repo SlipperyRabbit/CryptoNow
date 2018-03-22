@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoNow", "CryptoNow.csproj", "{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoNow.Test", "CryptoNow.Test\CryptoNow.Test.csproj", "{1FA961E9-689F-4684-A107-C4E8AB439164}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Debug|ARM.ActiveCfg = Debug|ARM
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Debug|ARM.Build.0 = Debug|ARM
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Debug|ARM.Deploy.0 = Debug|ARM
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Debug|x64.ActiveCfg = Debug|x64
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Debug|x64.Build.0 = Debug|x64
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Debug|x64.Deploy.0 = Debug|x64
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Debug|x86.ActiveCfg = Debug|x86
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Debug|x86.Build.0 = Debug|x86
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Debug|x86.Deploy.0 = Debug|x86
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Release|ARM.ActiveCfg = Release|ARM
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Release|ARM.Build.0 = Release|ARM
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Release|ARM.Deploy.0 = Release|ARM
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Release|x64.ActiveCfg = Release|x64
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Release|x64.Build.0 = Release|x64
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Release|x64.Deploy.0 = Release|x64
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Release|x86.ActiveCfg = Release|x86
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Release|x86.Build.0 = Release|x86
+		{EB175EF1-E209-445F-856B-A6E2DAFBCE9D}.Release|x86.Deploy.0 = Release|x86
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Debug|ARM.ActiveCfg = Debug|ARM
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Debug|ARM.Build.0 = Debug|ARM
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Debug|ARM.Deploy.0 = Debug|ARM
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Debug|x64.ActiveCfg = Debug|x64
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Debug|x64.Build.0 = Debug|x64
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Debug|x64.Deploy.0 = Debug|x64
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Debug|x86.ActiveCfg = Debug|x86
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Debug|x86.Build.0 = Debug|x86
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Debug|x86.Deploy.0 = Debug|x86
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Release|ARM.ActiveCfg = Release|ARM
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Release|ARM.Build.0 = Release|ARM
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Release|ARM.Deploy.0 = Release|ARM
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Release|x64.ActiveCfg = Release|x64
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Release|x64.Build.0 = Release|x64
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Release|x64.Deploy.0 = Release|x64
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Release|x86.ActiveCfg = Release|x86
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Release|x86.Build.0 = Release|x86
+		{1FA961E9-689F-4684-A107-C4E8AB439164}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D9240D9-2F0D-434C-AAD5-BD2C407E71E1}
+	EndGlobalSection
+EndGlobal
